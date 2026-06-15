@@ -21,6 +21,7 @@ MEMORY_INDEX = MEMORY_DIR / "MEMORY.md"
 WORKTREES_DIR = WORKDIR / ".worktrees"
 MAILBOX_DIR = WORKDIR / ".mailboxes"
 CRON_DURABLE_PATH = WORKDIR / ".scheduled_tasks.json"
+MCP_CONFIG_PATH = WORKDIR / ".mcp.json"
 
 # ── Tool Constants ──
 DEFAULT_MAX_TOKENS = 8000

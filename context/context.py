@@ -9,7 +9,7 @@ from datetime import datetime
 
 from shared.config import WORKDIR
 from skills.skill_loader import list_skills
-from mcp.mcp_client import mcp_clients
+from mcp.config import mcp_clients
 
 
 PROMPT_SECTIONS = {
