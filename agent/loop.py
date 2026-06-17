@@ -1,10 +1,18 @@
 
+import sys
+from pathlib import Path
+
+# Ensure project root is on sys.path — allows running from any directory
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
 import os
 import threading
 
-# Load environment before importing anything else
+# Load .env from project root (not cwd) — one config for all projects
 from dotenv import load_dotenv
-load_dotenv(override=True)
+load_dotenv(dotenv_path=PROJECT_ROOT / ".env", override=True)
 
 # Allow custom base URL (e.g. for proxies)
 if os.getenv("ANTHROPIC_BASE_URL"):
