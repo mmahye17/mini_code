@@ -1,0 +1,5 @@
+@echo off
+setlocal
+cd /d %CD%
+项目地址\mini_code\.venv\Scripts\python 项目地址\mini_code\agent\loop.py
+endlocal
